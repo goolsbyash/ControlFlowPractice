@@ -1,10 +1,9 @@
 const PI = 3.1415;
 const radius = 5;
-const area = PI * radius * radius;
+const area = PI * radius * radius; //78.5375
 
 let numOfPlants = 20;
-let spaceUsed = numOfPlants * 0.8;
-let capacity = area - spaceUsed;
+let maxNumOfPlants = area / 0.8; //98.171875
 
 // This variable can and will be changed for testing.
 let week = 3;
@@ -12,12 +11,12 @@ let week = 3;
 switch (week) {
     case 1: {
         if (week >= 1 && week <= 3) {
-            if (numOfPlants > (.80 * capacity)) {
-                console.log("Plants need to be PRUNED!");
-            } else if (numOfPlants >= (.50 * capacity)){
-                console.log("Plants need to be MONITORED!");
+            if (numOfPlants > (.80 * maxNumOfPlants)) {
+                console.log("Week One: Plants need to be PRUNED!");
+            } else if (numOfPlants >= (.50 * maxNumOfPlants)){
+                console.log("Week One: Plants need to be MONITORED!");
             } else {
-                console.log("Plants need to be PLANTED!");
+                console.log("Week One: Plants need to be PLANTED!");
             }
         }
         break;
@@ -25,12 +24,12 @@ switch (week) {
     case 2: {
         numOfPlants = numOfPlants * 2;
         if (week >= 1 && week <= 3) {
-            if (numOfPlants > (.80 * capacity)) {
-                console.log("Plants need to be PRUNED!");
-            } else if (numOfPlants >= (.50 * capacity)){
-                console.log("Plants need to be MONITORED!");
+            if (numOfPlants > (.80 * maxNumOfPlants)) {
+                console.log("Week Two: Plants need to be PRUNED!");
+            } else if (numOfPlants >= (.50 * maxNumOfPlants)){
+                console.log("Week Two: Plants need to be MONITORED!");
             } else {
-                console.log("Plants need to be PLANTED!");
+                console.log("Week Two: Plants need to be PLANTED!");
             }
         }
         break;
@@ -38,12 +37,12 @@ switch (week) {
     case 3: {
         numOfPlants = numOfPlants * 4;
         if (week >= 1 && week <= 3) {
-            if (numOfPlants > (.80 * capacity)) {
-                console.log("Plants need to be PRUNED!");
-            } else if (numOfPlants >= (.50 * capacity)){
-                console.log("Plants need to be MONITORED!");
+            if (numOfPlants > (.80 * maxNumOfPlants)) {
+                console.log("Week Three: Plants need to be PRUNED!");
+            } else if (numOfPlants >= (.50 * maxNumOfPlants)){
+                console.log("Week Three: Plants need to be MONITORED!");
             } else {
-                console.log("Plants need to be PLANTED!");
+                console.log("Week Three: Plants need to be PLANTED!");
             }
         }
         break;
